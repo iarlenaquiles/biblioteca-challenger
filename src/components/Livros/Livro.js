@@ -14,8 +14,6 @@ const Livro = ({ match, history }) => {
 	const livro = useSelector(
 		({ firestore: { ordered: { livros } } }) => livros && livros[0]
   );
-
-  console.log(livro);
   
   if (!livro) return <Spinner />;
   
