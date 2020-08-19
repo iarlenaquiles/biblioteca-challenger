@@ -74,7 +74,7 @@ const Usuarios = () => {
 				</h2>
 			</div>
 			<table className="table table-striped mt-4">
-				<thead className="text-light bg-primary">
+				<thead className="text-light bg-info">
 					<tr>
 						<th>Nome</th>
 						<th>Ações</th>
