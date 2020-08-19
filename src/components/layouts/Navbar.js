@@ -9,7 +9,7 @@ const Navbar = () => {
 	const autenticacion = useSelector((state) => state.firebase.auth);
 	
 	return (
-		<nav className="navbar navbar-expand-lg navbar-dark bg-danger mb-5">
+		<nav className="navbar navbar-expand-lg navbar-dark bg-info mb-5">
 			<nav className="navbar navbar-dark">
 				<span className="navbar-brand mb-0 h1">
 					Biblioteca
