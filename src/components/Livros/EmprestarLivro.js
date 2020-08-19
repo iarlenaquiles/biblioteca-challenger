@@ -20,9 +20,10 @@ const EmprestarLivro = ({ match, history }) => {
 
 	const subscriberState = useSelector((state) => state.subscriber);
 
-	const dataSubscriber = (subscriber) =>
+	const dataSubscriber = (subscriber) =>{
+    console.log(subscriber)
     dispatch(buscarUsuarioAction(subscriber));    
-
+  }
 	useEffect(() => {
 		dataSubscriber({});
 	}, []);
@@ -57,6 +58,7 @@ const EmprestarLivro = ({ match, history }) => {
   };
   
 	const solicitarEmprestimo = async () => {
+    console.log(subscriberState);
 		subscriberState.dataSolicitacao = new Date().toLocaleDateString();
     livro.locados.push(subscriberState);
     
@@ -114,7 +116,7 @@ const EmprestarLivro = ({ match, history }) => {
 					
 						{!isEmpty(subscriberState) && (
 							<FichaUsuario
-								suscriptor={subscriberState}
+                subscriber={subscriberState}
 								solicitarEmprestimo={solicitarEmprestimo}
 							/>
 						)}
