@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { store, rrfProps } from './store';
+import { store, userProps } from './store';
 import { ReactReduxFirebaseProvider } from 'react-redux-firebase';
 
 import Usuarios from './components/Usuarios/Usuarios';
@@ -11,8 +11,8 @@ import EditarUsuario from './components/Usuarios/EditarUsuario';
 import Navbar from './components/layouts/Navbar';
 import Livros from './components/Livros/Livros';
 import Livro from './components/Livros/Livro';
-import EditarLivro from './components/Livros/EditarLibro';
-import NovoLivro from './components/Livros/NuevoLibro';
+import EditarLivro from './components/Livros/EditarLivro';
+import NovoLivro from './components/Livros/NovoLivro';
 import EmprestarLivro from './components/Livros/EmprestarLivro';
 import Login from './components/Auth/Login';
 import {
@@ -23,7 +23,7 @@ import {
 function App() {
 	return (
 		<Provider store={store}>
-			<ReactReduxFirebaseProvider {...rrfProps}>
+			<ReactReduxFirebaseProvider {...userProps}>
 				<Router>
 					<Navbar />
 					<div className="container">
