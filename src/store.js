@@ -29,7 +29,7 @@ firebase.firestore();
 const rootReducer = combineReducers({
 	firebase: firebaseReducer,
 	firestore: firestoreReducer,
-	subcriber: buscarUsuarioReducer
+	subscriber: buscarUsuarioReducer
 });
 
 const initialState = {};
