@@ -24,6 +24,7 @@
 ## Run
 
 - Copiar o env.example para .env e inserir os dados do SDK do Firebase
+- tem que configurar a autenticação pode e-mail no Firebase e criar um usuário para fazer login
 - git clone
  - yarn
  - yarn start
